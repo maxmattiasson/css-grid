@@ -116,8 +116,8 @@
           onHover.classList.add("on-hover");
           divItem.classList.add("item");
 
-          divItem.style.gridColumn = `span ${randomNum(4)}`;
-          divItem.style.gridRow = `span ${randomNum(4)}`;
+          divItem.style.gridColumn = `span ${randomNum(4, 1)}`;
+          divItem.style.gridRow = `span ${randomNum(4, 1)}`;
 
           img.classList.add("gallery-img");
           img.src = `images/${randomNum(12)}.jpg`;
@@ -131,8 +131,8 @@
         }
       }
 
-      function randomNum(limit) {
-        return Math.floor(Math.random() * limit) + 1;
+      function randomNum(limit, type) {
+        return Math.floor(Math.random() * limit) + type;
       }
     </script>
   </body>
