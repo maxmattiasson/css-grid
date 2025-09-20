@@ -11,6 +11,8 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -31,4 +33,42 @@ h6 {
   font-weight: normal;
   margin: 0;
   font-size: 1.5em;
+}
+
+.pen {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 100px);
+  align-items: center;
+  gap: 10px;
+}
+.pen button {
+  height: 50px;
+}
+.pen__details {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.code {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 10px;
+}
+.editor__header {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+.editor__code {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.codepen {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  height: 100vh;
+  background-color: #1b2b34;
+}
+body {
+  color: white;
 }
